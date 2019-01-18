@@ -27,7 +27,18 @@ int main()
 	adtTree.PrintLevelOrder();
 	adtTree.PrintPreorder();
 	adtTree.PrintInOrder();
-
+	
+	/*binary sort tree*/
+	ADTBSTree<int> adtBSTree;
+	// create
+	adtBSTree.Create();
+	// search
+	Node<int> *node = new Node<int>();
+	adtBSTree.Search(2, node);
+	delete node;
+	// insert
+	std::vector<int> addtreeVec = { 1,2,3,4,5,6 };
+	adtBSTree.Insert(addtreeVec);
 
 	/* graph */ 
 	std::cout << "Create a graph" << std::endl;

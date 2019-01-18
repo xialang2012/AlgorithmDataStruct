@@ -229,50 +229,51 @@ ADTTree<T>::~ADTTree()
 template<typename T>
 class ADTBSTree : public ADTTree<T>
 {
+public:
+
 	ADTBSTree() : ADTTree() {};
 
 	void Create();
-	void Insert();
+	void Insert(const std::vector<T>& add);
 	void Delete();
 
-	bool Search(const T& key, Node<T>* posNode);
+	bool Search(const T& value, Node<T>* posNode);
 
-	~ADTBSTree();
+	~ADTBSTree() {};
+
+private:
+
 };
 
 template<typename T>
-bool ADTBSTree<T>::Search(const T& key, Node<T>* posNode)
+bool ADTBSTree<T>::Search(const T& value, Node<T>* posNode)
 {
 	if (root == nullptr)
 	{
 		std::cout << "empty tree" << std::endl;
-		return;
+		return false;
 	}
 
 	Node<T>* node = root;
 	while (node != nullptr)
 	{
-		if (node->data == key)
+		posNode = node;
+		if (node->data == value)
 		{
 			posNode = node;
 			return true;
 		}
-		else if (node->data > key)
+		else if (node->data > value)
 		{
 			node = node->left;
 		}
-		else if()
+		else
 		{
 			node = node->right;
 		}
+		
 	}
-
-}
-
-template<typename T>
-ADTBSTree<T>::~ADTBSTree()
-{
-
+	return false;
 }
 
 template<typename T>
@@ -288,8 +289,29 @@ void ADTBSTree<T>::Delete()
 }
 
 template<typename T>
-void ADTBSTree<T>::Insert()
+void ADTBSTree<T>::Insert(const std::vector<T>& add)
 {
+	Node<T> *node = new Node<T>();
+	for each(auto var in add)
+	{
+		if (this->Search(var, node))
+		{
+			std::cout << "value already existed in Binary Tree, continue" << std::endl;
+			continue;
+		}
 
+		Node<T> *nodeNew = new Node<T>();
+		nodeNew->data = var;
+		if (node->data > var)  // insert to left
+		{			
+			nodeNew->left = nodeNew;			
+		}
+		else
+		{
+			nodeNew->right = nodeNew;  // or to right
+		}
+	}
+
+	delete node;
 }
 
