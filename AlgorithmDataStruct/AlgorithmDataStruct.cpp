@@ -22,11 +22,11 @@ int main()
 
 
 	/* tree */
-	ADTTreeProcess<int> adtTreeProcess;
-	adtTreeProcess.create();
-	adtTreeProcess.printLevelOrder();
-	adtTreeProcess.printPreorder();
-	adtTreeProcess.printInOrder();
+	ADTTree<int> adtTree;
+	adtTree.Create();
+	adtTree.PrintLevelOrder();
+	adtTree.PrintPreorder();
+	adtTree.PrintInOrder();
 
 
 	/* graph */ 

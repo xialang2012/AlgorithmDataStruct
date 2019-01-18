@@ -30,7 +30,7 @@ int partition(std::vector<T> &vec, int low, int high)
 }
 
 template<typename T>
-bool quickSort(std::vector<T> &vec)
+bool quickSort(std::vector<T> &vec)    // O(nlog(n))
 {
 	int low = 0;
 	int high = vec.size()-1;

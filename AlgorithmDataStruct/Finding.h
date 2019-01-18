@@ -11,9 +11,9 @@ public:
 
 	~Finder() {};
 
-	void SeqFinder(const T& value);
+	void SeqFinder(const T& value);   // O(n)
 
-	void BinaryFinder(const T& value);
+	void BinaryFinder(const T& value);  // O(log(n))
 
 private:
 	// data

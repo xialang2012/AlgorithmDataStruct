@@ -29,26 +29,26 @@ private:
 
 // operations of tree
 template<typename T>
-class ADTTreeProcess
+class ADTTree
 {
 public:
 	Node<T>* root = nullptr;
 
-	void create(int depth = 3); // creat an tree with default depth of 3
-	void printPreorder(); // print the tree in preorder
+	void Create(int depth = 3); // creat an tree with default depth of 3
+	void PrintPreorder(); // print the tree in preorder
 	
-	void printLevelOrder(); // print the tree in levelorder
+	void PrintLevelOrder(); // print the tree in levelorder
 
-	void printInOrder(); // print the tree in inorder
+	void PrintInOrder(); // print the tree in inorder
 
-	virtual ~ADTTreeProcess();
+	virtual ~ADTTree();
 
 private:
 
 };
 
 template<typename T>
-void ADTTreeProcess<T>::create(int depth)
+void ADTTree<T>::Create(int depth)
 {
 	std::cout << "create an tree..." << std::endl;
 	this->root = new Node<int>();
@@ -108,7 +108,7 @@ void ADTTreeProcess<T>::create(int depth)
 }
 
 template<typename T>
-void ADTTreeProcess<T>::printPreorder()
+void ADTTree<T>::PrintPreorder()
 {
 	std::cout << "Preorder Search" << std::endl;
 	std::stack<Node<T> *> s;
@@ -134,7 +134,7 @@ void ADTTreeProcess<T>::printPreorder()
 }
 
 template<typename T>
-void ADTTreeProcess<T>::printLevelOrder()
+void ADTTree<T>::PrintLevelOrder()
 {
 	std::cout << "Level Order Search" << std::endl;
 	std::queue<Node<T> *> s;
@@ -162,7 +162,7 @@ void ADTTreeProcess<T>::printLevelOrder()
 }
 
 template<typename T>
-void ADTTreeProcess<T>::printInOrder()
+void ADTTree<T>::PrintInOrder()
 {
 	std::cout << "Inorder Search" << std::endl;
 	std::stack<Node<T> *> s;
@@ -197,7 +197,7 @@ void ADTTreeProcess<T>::printInOrder()
 }
 
 template<typename T>
-ADTTreeProcess<T>::~ADTTreeProcess()
+ADTTree<T>::~ADTTree()
 {
 	std::cout << "Destory all the resources" << std::endl;
 	std::queue<Node<T> *> s;
@@ -227,17 +227,21 @@ ADTTreeProcess<T>::~ADTTreeProcess()
 
 // binray sort tree
 template<typename T>
-class ADTBSTreeProcess : public ADTTreeProcess<T>
+class ADTBSTree : public ADTTree<T>
 {
-	ADTBSTreeProcess() : ADTTreeProcess() {};
+	ADTBSTree() : ADTTree() {};
 
-	bool search(const T& key, Node<T>* posNode);
+	void Create();
+	void Insert();
+	void Delete();
 
-	~ADTBSTreeProcess();
+	bool Search(const T& key, Node<T>* posNode);
+
+	~ADTBSTree();
 };
 
 template<typename T>
-bool ADTBSTreeProcess<T>::search(const T& key, Node<T>* posNode)
+bool ADTBSTree<T>::Search(const T& key, Node<T>* posNode)
 {
 	if (root == nullptr)
 	{
@@ -266,7 +270,25 @@ bool ADTBSTreeProcess<T>::search(const T& key, Node<T>* posNode)
 }
 
 template<typename T>
-ADTBSTreeProcess<T>::~ADTBSTreeProcess()
+ADTBSTree<T>::~ADTBSTree()
+{
+
+}
+
+template<typename T>
+void ADTBSTree<T>::Create()
+{
+
+}
+
+template<typename T>
+void ADTBSTree<T>::Delete()
+{
+
+}
+
+template<typename T>
+void ADTBSTree<T>::Insert()
 {
 
 }
