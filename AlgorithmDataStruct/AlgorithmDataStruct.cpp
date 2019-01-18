@@ -5,6 +5,7 @@
 #include "Sort.h"
 #include "ADTTree.h"
 #include "ADTGarph.h"
+#include "Finding.h"
 
 int main()
 {
@@ -92,6 +93,13 @@ int main()
 	graph->prim();
 
 	graph->Dijstra(0, 9);
+
+
+	// finding
+	std::vector<int> dataF = { 0,1,1,2,3,4,5,6,8,9 };
+	Finder<int> finder(dataF);
+	finder.Seqfinder(5);
+
 	system("pause");
 
     return 0;

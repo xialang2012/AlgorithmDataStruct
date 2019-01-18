@@ -3,22 +3,30 @@
 #include "ADTTree.h"
 
 template<typename T>
-class SeqSearch
+class Finder
 {
 public:
-	SeqSearch();
-	~SeqSearch();
+	Finder() {};
+	Finder(std::vector<T>& d) : data(d) {}
+
+	~Finder() {};
+
+	void Seqfinder(const T& value);
 
 private:
-
+	// data
+	std::vector<T>& data;
 };
 
-template<typename T>
-SeqSearch::SeqSearch()
-{
-}
 
 template<typename T>
-SeqSearch::~SeqSearch()
+void Finder<T>::Seqfinder(const T& value)
 {
+	std::cout << "Seq finder: " << std::endl;
+	int i = data.size()-1;
+	while (data[i] != value && i >= 0)
+	{
+		--i;
+	}
+	std::cout << "Find out value at position of: " << i << std::endl;
 }
