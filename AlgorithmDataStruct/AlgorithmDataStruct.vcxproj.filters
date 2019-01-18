@@ -41,8 +41,5 @@
     <ClCompile Include="AlgorithmDataStruct.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="sortcpp.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

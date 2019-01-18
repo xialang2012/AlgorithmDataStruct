@@ -11,7 +11,7 @@ int main()
 {
 	/* quicck sort */
 	std::vector<int> vec = {50, 10, 90, 30, 70, 40, 80, 30, 20};
-	if (quickSort(vec))
+	if (QuickSort(vec))
 	{
 		for each (auto var in vec)
 		{

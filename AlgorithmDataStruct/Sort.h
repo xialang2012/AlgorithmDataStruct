@@ -6,7 +6,7 @@
 #include <algorithm>
 
 template<typename T>
-int partition(std::vector<T> &vec, int low, int high)
+int Partition(std::vector<T> &vec, int low, int high)
 {
 	T pivot = vec[low];
 	while (low < high)
@@ -30,14 +30,14 @@ int partition(std::vector<T> &vec, int low, int high)
 }
 
 template<typename T>
-bool quickSort(std::vector<T> &vec)    // O(nlog(n))
+bool QuickSort(std::vector<T> &vec)    // O(nlog(n))
 {
 	int low = 0;
 	int high = vec.size()-1;
 	if (high <= low) return false;
 
 	std::stack<int> s;
-	int mid = partition<T>(vec, low, high);
+	int mid = Partition<T>(vec, low, high);
 	if (low < (mid - 1))
 	{
 		s.push(low);
@@ -55,7 +55,7 @@ bool quickSort(std::vector<T> &vec)    // O(nlog(n))
 		s.pop();
 		int low_new = s.top();
 		s.pop();
-		int mid_new = partition(vec, low_new, high_new);
+		int mid_new = Partition(vec, low_new, high_new);
 		if (low_new < mid_new - 1) {
 			s.push(low_new);
 			s.push(mid_new - 1);
