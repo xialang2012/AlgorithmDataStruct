@@ -96,9 +96,10 @@ int main()
 
 
 	// finding
-	std::vector<int> dataF = { 0,1,1,2,3,4,5,6,8,9 };
+	std::vector<int> dataF = { 0,1,1,2,3,4,5,6,8,9,10,11,11,15,26,41,42,49,53 };
 	Finder<int> finder(dataF);
-	finder.Seqfinder(5);
+	finder.SeqFinder(5);
+	finder.BinaryFinder(15);
 
 	system("pause");
 
