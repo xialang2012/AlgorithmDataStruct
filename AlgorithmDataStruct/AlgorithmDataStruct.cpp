@@ -1,4 +1,4 @@
-// AlgorithmDataStruct.cpp: 定义控制台应用程序的入口点。
+// AlgorithmDataStruct.cpp: 
 //
 
 #include "stdafx.h"
