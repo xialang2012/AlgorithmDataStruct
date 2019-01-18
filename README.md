@@ -1,5 +1,5 @@
 # Algorithms-and-Data-Structures
-It contains some simple implementations of some algorithms and data structures which are listed below.
+It contains some simple implementations of algorithms and data structures which are listed below.
 
 1.Fast sort
 
@@ -8,3 +8,7 @@ It contains some simple implementations of some algorithms and data structures w
 3.Graph creation, DFS, BFS, Prim.
 
 4.KMP for string
+
+5.Binary search
+
+6.Binary Sort Tree

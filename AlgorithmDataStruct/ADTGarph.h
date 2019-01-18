@@ -126,7 +126,7 @@ public:
 	void BFS();
 
 	// prim algorithm finds a minimum spanning tree
-	void prim();
+	void Prim();
 
 	// get minimum
 	int GetMiniDistance(const std::vector<int> &dist, const std::vector<bool> &visited);
@@ -222,7 +222,7 @@ void Graph<T>::BFS()
 }
 
 template<typename T>
-void Graph<T>::prim()
+void Graph<T>::Prim()
 {
 	std::cout << "Prim algorithm to find a minimum spanning tree " << std::endl;
 	std::vector<int> dist(vertexNum, MAX_INT);

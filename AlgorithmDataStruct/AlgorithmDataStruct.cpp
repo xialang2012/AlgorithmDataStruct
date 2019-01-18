@@ -90,7 +90,7 @@ int main()
 	graph = new Graph<int>(edgePair, 9, edgePair.size(), weights);
 	graph->DFS();
 
-	graph->prim();
+	graph->Prim();
 
 	graph->Dijstra(0, 9);
 
